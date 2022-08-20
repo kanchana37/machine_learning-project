@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask,request
 import sys
 from housing.util.util import read_yaml_file,write_yaml_file
@@ -208,3 +209,17 @@ def render_log_dir(req_path):
 
 if __name__=="__main__":
     app.run()
+=======
+from flask import Flask
+
+app=Flask(__name__)
+
+
+@app.route("/",methods=['GET','POST'])
+def index():
+    return "CI CD pipeline has been established."
+
+
+if __name__=="__main__":
+    app.run(debug=True)
+>>>>>>> 3635a34c4057a07b9e7a5982b907f83d737c4d1c

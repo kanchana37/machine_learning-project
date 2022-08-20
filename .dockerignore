@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 .git
 venv/
 .gitignore
+=======
+venv/
+.git
+.gitignore
+>>>>>>> 3635a34c4057a07b9e7a5982b907f83d737c4d1c

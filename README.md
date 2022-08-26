@@ -92,4 +92,19 @@ Tos stop docker conatiner
 ```
 docker stop <container_id>
 ```
+## Project Pipeline
+1.Data Ingestion
+
+2.Data Validation
+
+3.Data Transformation
+
+4.Model Training
+
+5.Model Evaluation
+
+6.Model Deployement
+
+## Deployment Link:
+https://dashboard.heroku.com/apps/housing-price-predictor12
 

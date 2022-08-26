@@ -1,0 +1,5 @@
+best_model:
+  model_path: C:\Users\aryan\machine_learning-project\housing\artifact\model_trainer\2022-08-27-01-42-48\trained_model\model.pkl
+history:
+  2022-08-27-01-42-48:
+    model_path: C:\Users\aryan\machine_learning-project\housing\artifact\model_trainer\2022-08-25-22-29-23\trained_model\model.pkl

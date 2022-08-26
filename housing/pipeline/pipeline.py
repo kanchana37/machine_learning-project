@@ -1,7 +1,7 @@
 from collections import namedtuple
 from datetime import datetime
 import uuid
-from housing.config.configuration import Configuartion
+from housing.config.configuration import Configuration
 from housing.logger import logging,get_log_file_name
 from housing.exception import HousingException
 from threading import Thread
@@ -11,12 +11,12 @@ from multiprocessing import Process
 from housing.entity.artifact_entity import ModelPusherArtifact, DataIngestionArtifact,ModelEvaluationArtifact
 from housing.entity.artifact_entity import DataValidationArtifact, DataTransformationArtifact, ModelTrainerArtifact
 from housing.entity.config_entity import DataIngestionConfig,ModelEvaluationConfig
-from housing.component.data_ingestion import DataIngestion
-from housing.component.data_validation import DataValidation
-from housing.component.data_transformation import DataTransformation
-from housing.component.model_trainer import ModelTrainer
-from housing.component.model_evaluation import ModelEvaluation
-from housing.component.model_pusher import ModelPusher
+from housing.components.data_ingestion import DataIngestion
+from housing.components.data_validation import DataValidation
+from housing.components.data_transformation import DataTransformation
+from housing.components.model_trainer import ModelTrainer
+from housing.components.model_evaluation import ModelEvaluation
+from housing.components.model_pusher import ModelPusher
 import os, sys
 from collections import namedtuple
 from datetime import datetime
@@ -26,7 +26,7 @@ Experiment = namedtuple("Experiment",["experiment_id","initialization_timestamp"
 "running_status","start_time","stop_time","execution_time","message","experiment_file_path","accuracy","is_model_accepted"])
 
 
-config = Configuartion()
+config = Configuration()
 os.makedirs(config.training_pipeline_config.artifact_dir,exist_ok=True)
 
 
@@ -38,7 +38,7 @@ class Pipeline(Thread):
     EXPERIMENT_DIR_NAME,EXPERIMENT_FILE_NAME)
 
 
-    def __init__(self, config: Configuartion = config) -> None:
+    def __init__(self, config: Configuration = config) -> None:
         try:
             super().__init__(daemon=False, name="pipeline")
             self.config = config

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # machine_learning-project
 Start Machine Learning project.
 Software and account Requirement.
@@ -154,5 +153,4 @@ docker ps
 Tos stop docker conatiner
 ```
 docker stop <container_id>
-```
->>>>>>> 3635a34c4057a07b9e7a5982b907f83d737c4d1c
+``
